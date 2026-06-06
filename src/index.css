@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Onest', 'Manrope', system-ui, -apple-system, sans-serif;
+    color: #2B1D12;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background: #FFFBF6;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Baloo 2', 'Onest', system-ui, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: #FFD3B0;
+    color: #2B1D12;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply max-w-[1180px] mx-auto px-7;
+  }
+  .btn-l {
+    @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full font-bold text-[15px] cursor-pointer transition-colors whitespace-nowrap border-0;
+  }
+  .btn-l-lg {
+    @apply h-14 px-[30px] text-[16.5px];
+  }
+  .btn-primary {
+    @apply bg-orange-500 text-white shadow-pop hover:bg-orange-600;
+  }
+  .btn-ghost {
+    @apply bg-white text-ink-800 border border-line;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 bg-orange-50 text-orange-700 border border-orange-100 px-[14px] py-[7px] rounded-full font-bold text-[13px] whitespace-nowrap;
+  }
+  .card-base {
+    @apply bg-white border border-line shadow-warm-sm;
+  }
+}
