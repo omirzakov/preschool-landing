@@ -75,7 +75,7 @@ export default function Schools() {
         <SectionHead
           tag="Нам доверяют"
           title="Школы и сады, которые уже с нами"
-          lead="Более 120 учреждений ведут посещаемость, финансы и связь с родителями в «Лучике»."
+          lead="Более 120 учреждений ведут посещаемость, финансы и связь с родителями в Preschool."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SCHOOLS.map((s) => (
