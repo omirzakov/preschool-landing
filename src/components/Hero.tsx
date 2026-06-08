@@ -106,10 +106,6 @@ export default function Hero() {
                       Группа «Солнышко»
                     </div>
                   </div>
-                  <span className="ml-auto inline-flex items-center gap-1 bg-white/20 rounded-full px-2.5 py-1 text-[11px] font-semibold">
-                    <span className="w-[6px] h-[6px] rounded-full bg-white" />
-                    В саду
-                  </span>
                 </div>
                 <div className="mt-3 pt-3 border-t border-white/20 flex items-center justify-between text-[12px]">
                   <span className="text-white/80">Отметка о приходе</span>
@@ -181,7 +177,7 @@ export default function Hero() {
               </div>
 
               {/* Bottom nav */}
-              <div className="mt-auto border-t border-line bg-white/80 backdrop-blur px-6 py-3 flex items-center justify-between text-ink-400">
+              <div className="mt-auto border-t border-line bg-white/80 backdrop-blur px-6 py-2 flex items-center justify-between text-ink-400">
                 <Home className="w-[20px] h-[20px] text-orange-500" />
                 <CalendarDays className="w-[20px] h-[20px]" />
                 <MessageCircle className="w-[20px] h-[20px]" />
