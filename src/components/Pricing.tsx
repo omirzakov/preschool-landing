@@ -1,4 +1,4 @@
-import { Check, X } from 'lucide-react'
+import { Check, ArrowRight, Sparkles } from 'lucide-react'
 import SectionHead from './SectionHead'
 
 type Plan = {
@@ -6,7 +6,7 @@ type Plan = {
   desc: string
   price: string
   unit: string
-  features: { text: string; included: boolean }[]
+  features: string[]
   cta: string
   popular?: boolean
 }
@@ -18,12 +18,10 @@ const PLANS: Plan[] = [
     price: '290 000 ₸',
     unit: '/ год',
     features: [
-      { text: 'До 100 учеников', included: true },
-      { text: 'Посещаемость и расписание', included: true },
-      { text: 'Чаты с родителями', included: true },
-      { text: 'Базовые отчёты', included: true },
-      { text: 'Финансовый модуль', included: false },
-      { text: 'Интеграция с банком БЦК', included: false },
+      'До 100 учеников',
+      'Посещаемость и расписание',
+      'Чаты с родителями',
+      'Базовые отчёты',
     ],
     cta: 'Попробовать',
   },
@@ -33,12 +31,11 @@ const PLANS: Plan[] = [
     price: '690 000 ₸',
     unit: '/ год',
     features: [
-      { text: 'До 400 учеников', included: true },
-      { text: 'Всё из тарифа «Старт»', included: true },
-      { text: 'Финансы и квитанции', included: true },
-      { text: 'Дневник развития ребёнка', included: true },
-      { text: 'Интеграция с БЦК', included: true },
-      { text: 'Брендирование приложения', included: false },
+      'До 400 учеников',
+      'Всё из тарифа «Старт»',
+      'Финансы и квитанции',
+      'Дневник развития ребёнка',
+      'Интеграция с банком БЦК',
     ],
     cta: 'Подключить',
     popular: true,
@@ -49,12 +46,12 @@ const PLANS: Plan[] = [
     price: 'Договор',
     unit: '',
     features: [
-      { text: 'Без ограничений по ученикам', included: true },
-      { text: 'Всё из тарифа «Стандарт»', included: true },
-      { text: 'Брендирование приложения', included: true },
-      { text: 'Персональный менеджер', included: true },
-      { text: 'SLA 99.9% и приоритетная поддержка', included: true },
-      { text: 'Кастомные интеграции', included: true },
+      'Без ограничений по ученикам',
+      'Всё из тарифа «Стандарт»',
+      'Брендирование приложения',
+      'Персональный менеджер',
+      'SLA 99,9% и приоритет',
+      'Кастомные интеграции',
     ],
     cta: 'Связаться',
   },
@@ -62,71 +59,95 @@ const PLANS: Plan[] = [
 
 export default function Pricing() {
   return (
-    <section className="py-[72px]" id="pricing">
+    <section id="pricing" className="section bg-bg-warm">
       <div className="wrap">
         <SectionHead
           tag="Тарифы для школ"
           title="Оплата раз в год — родители платят школе сами"
           lead="Школа выбирает тариф при подключении. Переход на более высокий — в любой момент. Пробный период 14 дней на любом тарифе."
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px] items-stretch">
-          {PLANS.map((p) => (
+
+        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
+          {PLANS.map((p, i) => (
             <div
               key={p.name}
-              className={`relative rounded-r-xl p-[32px_28px] flex flex-col bg-white ${
+              className={`reveal relative flex flex-col rounded-r-lg p-8 ${
                 p.popular
-                  ? 'border-[1.5px] border-orange-400 shadow-warm-md'
-                  : 'border-[1.5px] border-line shadow-warm-sm'
+                  ? 'bg-ink-900 text-white shadow-warm-lg md:-translate-y-3'
+                  : 'card'
               }`}
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
               {p.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white font-bold text-[12.5px] px-4 py-1.5 rounded-full shadow-pop">
-                  Популярный
+                <span className="absolute -top-3.5 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-orange-500 px-4 py-1.5 text-[12.5px] font-bold text-white shadow-pop">
+                  <Sparkles className="h-3.5 w-3.5" /> Популярный
                 </span>
               )}
-              <div className="font-display font-bold text-[24px] text-ink-900">
+
+              <div className="font-display text-[24px] font-semibold">
                 {p.name}
               </div>
-              <div className="text-[14px] text-ink-500 mt-1.5 mb-[18px] min-h-[40px]">
+              <p
+                className={`mt-1.5 min-h-[42px] text-[14px] ${
+                  p.popular ? 'text-white/65' : 'text-ink-500'
+                }`}
+              >
                 {p.desc}
-              </div>
-              <div className="font-display font-extrabold text-[40px] text-ink-900 leading-none">
-                {p.price}
+              </p>
+
+              <div className="mt-5 flex items-baseline gap-2">
+                <span className="font-display text-[40px] font-semibold leading-none">
+                  {p.price}
+                </span>
                 {p.unit && (
-                  <span className="font-ui text-[16px] font-semibold text-ink-500 ml-2">
+                  <span
+                    className={`text-[15px] font-medium ${
+                      p.popular ? 'text-white/60' : 'text-ink-500'
+                    }`}
+                  >
                     {p.unit}
                   </span>
                 )}
               </div>
-              <ul className="list-none p-0 my-6 flex flex-col gap-[13px] flex-1">
+
+              <ul className="my-7 flex flex-1 flex-col gap-3.5">
                 {p.features.map((f) => (
                   <li
-                    key={f.text}
-                    className={`flex items-start gap-2.5 text-[14.5px] ${
-                      f.included ? 'text-ink-700' : 'text-ink-400'
+                    key={f}
+                    className={`flex items-start gap-3 text-[14.5px] ${
+                      p.popular ? 'text-white/85' : 'text-ink-700'
                     }`}
                   >
-                    {f.included ? (
-                      <Check className="w-[18px] h-[18px] text-ok flex-none mt-0.5" />
-                    ) : (
-                      <X className="w-[18px] h-[18px] text-ink-300 flex-none mt-0.5" />
-                    )}
-                    <span>{f.text}</span>
+                    <span
+                      className={`mt-0.5 grid h-[18px] w-[18px] flex-none place-items-center rounded-full ${
+                        p.popular ? 'bg-orange-500/90' : 'bg-ok-bg'
+                      }`}
+                    >
+                      <Check
+                        className={`h-3 w-3 ${
+                          p.popular ? 'text-white' : 'text-ok'
+                        }`}
+                        strokeWidth={3}
+                      />
+                    </span>
+                    {f}
                   </li>
                 ))}
               </ul>
+
               <a
                 href="#contact"
-                className={`btn-l w-full ${
-                  p.popular ? 'btn-primary' : 'btn-ghost'
+                className={`btn w-full ${
+                  p.popular ? 'btn-on-dark' : 'btn-ghost'
                 }`}
               >
-                {p.cta}
+                {p.cta} <ArrowRight className="h-[17px] w-[17px]" />
               </a>
             </div>
           ))}
         </div>
-        <p className="text-center text-ink-500 text-[14.5px] mt-7">
+
+        <p className="reveal mt-8 text-center text-[14.5px] text-ink-500">
           Сверхлимитные ученики — по отдельной договорённости · Интеграция оплаты
           через банк БЦК — по запросу
         </p>

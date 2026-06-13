@@ -1,15 +1,48 @@
-type Props = { tag: string; title: string; lead: string }
+type Props = {
+  tag: string
+  title: string
+  lead?: string
+  align?: 'center' | 'left'
+  tone?: 'light' | 'dark'
+  className?: string
+}
 
-export default function SectionHead({ tag, title, lead }: Props) {
+export default function SectionHead({
+  tag,
+  title,
+  lead,
+  align = 'center',
+  tone = 'light',
+  className = '',
+}: Props) {
+  const dark = tone === 'dark'
   return (
-    <div className="text-center max-w-[680px] mx-auto mb-12">
-      <div className="text-orange-600 font-bold text-[14px] tracking-[0.04em] uppercase">
+    <div
+      className={`reveal max-w-[680px] ${
+        align === 'center' ? 'mx-auto text-center' : 'text-left'
+      } ${className}`}
+    >
+      <div
+        className={`text-[13px] font-bold uppercase tracking-[0.12em] ${
+          dark ? 'text-orange-300' : 'text-orange-600'
+        }`}
+      >
         {tag}
       </div>
-      <h2 className="text-[32px] md:text-[42px] text-ink-900 my-3 tracking-[-0.02em]">
+      <h2
+        className={`text-h2 mt-3 ${dark ? 'text-white' : 'text-ink-900'}`}
+      >
         {title}
       </h2>
-      <p className="text-[18px] text-ink-600 leading-[1.55]">{lead}</p>
+      {lead && (
+        <p
+          className={`mt-4 text-[18px] leading-[1.6] ${
+            dark ? 'text-white/70' : 'text-ink-600'
+          } ${align === 'center' ? 'mx-auto' : ''}`}
+        >
+          {lead}
+        </p>
+      )}
     </div>
   )
 }

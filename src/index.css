@@ -2,49 +2,193 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   DESIGN SYSTEM — "Warm Daylight"
+   Display: Fraunces (soft serif)  ·  UI/Body: Onest (grotesque)
+   ============================================================ */
+
 @layer base {
-  html,
+  :root {
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Onest', 'Manrope', system-ui, -apple-system, sans-serif;
-    color: #2B1D12;
+    font-family: 'Onest', system-ui, -apple-system, sans-serif;
+    color: #382818;
+    background: #fffcf7;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background: #FFFBF6;
+    font-feature-settings: 'ss01', 'cv01';
   }
-  h1, h2, h3, h4, h5 {
-    font-family: 'Baloo 2', 'Onest', system-ui, sans-serif;
-    font-weight: 700;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Fraunces', Georgia, serif;
     margin: 0;
-    letter-spacing: -0.01em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #241910;
+    font-optical-sizing: auto;
   }
+
   ::selection {
-    background: #FFD3B0;
-    color: #2B1D12;
+    background: #ffd3ac;
+    color: #241910;
+  }
+
+  /* Honour reduced-motion across the whole page */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
+  /* ---------- Layout ---------- */
   .wrap {
-    @apply max-w-[1180px] mx-auto px-7;
+    @apply max-w-wrap mx-auto px-6 sm:px-8;
   }
-  .btn-l {
-    @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full font-bold text-[15px] cursor-pointer transition-colors whitespace-nowrap border-0;
+  .section {
+    @apply py-20 md:py-28;
   }
-  .btn-l-lg {
-    @apply h-14 px-[30px] text-[16.5px];
+
+  /* ---------- Eyebrow / pill label ---------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-orange-50
+           px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.08em] text-orange-700;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full
+           font-semibold transition-all duration-200 outline-none select-none
+           focus-visible:ring-4 focus-visible:ring-orange-300/50 active:scale-[0.97];
+    height: 48px;
+    padding: 0 22px;
+    font-size: 15px;
+  }
+  .btn-lg {
+    height: 56px;
+    padding: 0 30px;
+    font-size: 16.5px;
   }
   .btn-primary {
-    @apply bg-orange-500 text-white shadow-pop hover:bg-orange-600;
+    @apply bg-orange-500 text-white shadow-pop hover:bg-orange-600 hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply bg-ink-900 text-white shadow-warm-md hover:bg-ink-800 hover:-translate-y-0.5;
   }
   .btn-ghost {
-    @apply bg-white text-ink-800 border border-line;
+    @apply border border-line bg-white/70 text-ink-800 backdrop-blur
+           hover:border-orange-200 hover:bg-white hover:-translate-y-0.5;
   }
-  .eyebrow {
-    @apply inline-flex items-center gap-2 bg-orange-50 text-orange-700 border border-orange-100 px-[14px] py-[7px] rounded-full font-bold text-[13px] whitespace-nowrap;
+  .btn-on-dark {
+    @apply bg-white text-ink-900 hover:bg-orange-50 hover:-translate-y-0.5
+           focus-visible:ring-white/40;
   }
-  .card-base {
-    @apply bg-white border border-line shadow-warm-sm;
+
+  /* ---------- Surfaces ---------- */
+  .card {
+    @apply rounded-r-lg border border-line bg-white shadow-warm-sm;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-200 hover:shadow-warm-md;
+  }
+  .glass {
+    @apply border border-white/60 bg-white/70 backdrop-blur-xl;
+  }
+  .glass-dark {
+    @apply border border-white/10 bg-white/[0.06] backdrop-blur-xl;
+  }
+
+  /* ---------- Inputs ---------- */
+  .field {
+    @apply w-full rounded-r-sm border-[1.5px] border-line bg-bg px-4 py-3 text-[15px] text-ink-900
+           outline-none transition-colors placeholder:text-ink-400
+           focus:border-orange-400 focus:bg-white focus:ring-4 focus:ring-orange-300/30;
+  }
+  .field-label {
+    @apply mb-1.5 block text-[13px] font-semibold text-ink-700;
+  }
+
+  /* ---------- Decorative atmosphere ---------- */
+  .mesh-warm {
+    background-image:
+      radial-gradient(48% 55% at 78% 18%, rgba(255, 179, 119, 0.55), transparent 70%),
+      radial-gradient(40% 48% at 12% 8%, rgba(255, 211, 172, 0.45), transparent 70%),
+      radial-gradient(60% 60% at 50% 100%, rgba(251, 243, 233, 0.9), transparent 70%);
+  }
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    mix-blend-mode: soft-light;
+  }
+}
+
+@layer utilities {
+  /* Fluid display scale */
+  .text-display {
+    font-size: clamp(2.6rem, 1.6rem + 4.4vw, 4.6rem);
+    line-height: 1.02;
+  }
+  .text-h2 {
+    font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+    line-height: 1.06;
+  }
+
+  /* Scroll reveal — toggled by useReveal() */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.7s var(--ease-out),
+      transform 0.7s var(--ease-out);
+    will-change: opacity, transform;
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
   }
 }
