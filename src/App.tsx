@@ -28,7 +28,6 @@ export default function App() {
         <Benefits />
         <Testimonials />
         <Schools />
-        <Pricing />
         <FAQ />
         <Contact />
       </main>
