@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="grid grid-cols-2 gap-10 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div className="col-span-2 lg:col-span-1">
-            <Brand variant="light" />
+            <Brand variant="light" className="rounded-full" />
             <p className="mt-4 max-w-[300px] text-[14.5px] leading-[1.65] text-white/60">
               Платформа управления детскими садами и школами. Веб-админка и
               мобильное приложение для всех ролей.

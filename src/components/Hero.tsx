@@ -18,6 +18,7 @@ import {
   User,
   CheckCircle2,
 } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const SCHEDULE = [
   { icon: Soup, time: '08:30', label: 'Завтрак', tone: 'done' },
@@ -97,6 +98,21 @@ export default function Hero() {
         {/* Device */}
         <div className="relative flex justify-center reveal" style={{ transitionDelay: '120ms' }}>
           <div className="pointer-events-none absolute inset-[-12%] -z-10 rounded-full bg-[radial-gradient(60%_60%_at_60%_40%,rgba(255,179,119,0.5),transparent_70%)]" />
+
+          {/* Floating brand medallion */}
+          <div
+            className="absolute -top-3 right-2 z-30 hidden rounded-full bg-white p-2 shadow-warm-lg ring-1 ring-line sm:block animate-float md:-top-5 md:right-6"
+            style={{ animationDelay: '0.9s' }}
+          >
+            <img
+              src={logo}
+              alt="Preschool education"
+              className="h-16 w-16 rounded-full md:h-[72px] md:w-[72px]"
+            />
+            <span className="absolute -bottom-1 -right-1 grid h-6 w-6 place-items-center rounded-full bg-ok text-white shadow-pop ring-2 ring-bg">
+              <CheckCircle2 className="h-[14px] w-[14px]" />
+            </span>
+          </div>
 
           {/* Phone */}
           <div className="animate-float relative z-10 w-[296px] rounded-[44px] bg-ink-900 p-2.5 shadow-warm-lg">
