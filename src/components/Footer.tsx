@@ -30,6 +30,14 @@ const COLUMNS = [
   },
 ]
 
+// Юридические страницы для App Store / Google Play — статический public/legal.html
+const LEGAL = [
+  { href: '/legal.html#privacy', label: 'Политика конфиденциальности' },
+  { href: '/legal.html#terms', label: 'Условия использования' },
+  { href: '/legal.html#support', label: 'Поддержка' },
+  { href: '/legal.html#delete', label: 'Удаление аккаунта' },
+]
+
 export default function Footer() {
   return (
     <footer className="bg-espresso pt-16 pb-8 text-white/70">
@@ -71,13 +79,16 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/10 pt-7 text-[13.5px] text-white/50 md:flex-row md:items-center">
           <span>© 2026 Preschool. Все права защищены.</span>
-          <div className="flex gap-6">
-            <a href="#" className="no-underline text-white/50 transition-colors hover:text-white/80">
-              Политика конфиденциальности
-            </a>
-            <a href="#" className="no-underline text-white/50 transition-colors hover:text-white/80">
-              Условия
-            </a>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {LEGAL.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="no-underline text-white/50 transition-colors hover:text-white/80"
+              >
+                {l.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
