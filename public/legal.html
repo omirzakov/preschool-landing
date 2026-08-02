@@ -1,0 +1,1055 @@
+<!doctype html>
+<!--
+  ============================================================================
+  Balam — юридические страницы для App Store / Google Play.
+  Один файл, четыре раздела: #privacy, #terms, #support, #delete
+
+  Реквизиты заполнены полностью, плейсхолдеров не осталось:
+    ИП «PRESCHOOL EDUCATION»
+    Республика Казахстан, г. Семей, ул. Торайгырова, 17
+    makpal200390@mail.ru · +7 702 852 5425
+
+  Ссылки для консолей:
+    Privacy Policy URL  → https://ваш-домен/legal.html#privacy
+    Terms of Use (EULA) → https://ваш-домен/legal.html#terms
+    Support URL         → https://ваш-домен/legal.html#support
+    Account deletion    → https://ваш-домен/legal.html#delete
+  ============================================================================
+-->
+<html lang="ru" data-lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Balam — Политика конфиденциальности, Условия использования, Поддержка</title>
+    <meta
+      name="description"
+      content="Политика конфиденциальности, пользовательское соглашение, поддержка и удаление аккаунта приложения Balam."
+    />
+    <style>
+      :root {
+        --bg: #f7f8fb;
+        --card: #ffffff;
+        --text: #1b2230;
+        --muted: #5d6879;
+        --line: #e4e8f0;
+        --accent: #3f6fd8;
+        --accent-soft: #eef3ff;
+        --warn: #fff4cc;
+        --warn-line: #e8cf7a;
+        --radius: 16px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #12151c;
+          --card: #191d26;
+          --text: #e8ecf4;
+          --muted: #99a3b5;
+          --line: #2a3140;
+          --accent: #7ea3f0;
+          --accent-soft: #1e2635;
+          --warn: #3d3413;
+          --warn-line: #7a682a;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-text-size-adjust: 100%;
+      }
+      html[data-lang="ru"] .l-en,
+      html[data-lang="en"] .l-ru {
+        display: none !important;
+      }
+
+      header.top {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: saturate(180%) blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .wrap {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 60px;
+        flex-wrap: wrap;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        margin-right: auto;
+        text-decoration: none;
+        color: var(--text);
+      }
+      nav.links {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      nav.links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+      nav.links a:hover {
+        color: var(--accent);
+        background: var(--accent-soft);
+      }
+      .langs {
+        display: flex;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .langs button {
+        font: inherit;
+        font-size: 13px;
+        padding: 5px 12px;
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+      }
+      .langs button[aria-pressed="true"] {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      main {
+        padding: 32px 0 80px;
+      }
+      h1 {
+        font-size: 30px;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 23px;
+        letter-spacing: -0.01em;
+        margin: 0 0 6px;
+      }
+      h3 {
+        font-size: 17px;
+        margin: 26px 0 6px;
+      }
+      p,
+      ul,
+      ol,
+      table {
+        margin: 0 0 14px;
+      }
+      ul,
+      ol {
+        padding-left: 22px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      a {
+        color: var(--accent);
+      }
+      .lede {
+        color: var(--muted);
+      }
+      .meta {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+      section.doc {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+        margin-bottom: 22px;
+      }
+      @media (max-width: 560px) {
+        section.doc {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 25px;
+        }
+      }
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border-radius: 999px;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+      }
+      .fill {
+        background: var(--warn);
+        border-bottom: 1px dashed var(--warn-line);
+        padding: 0 3px;
+        border-radius: 3px;
+      }
+      .tablewrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 14px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 520px;
+        font-size: 14.5px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        font-weight: 600;
+        color: var(--muted);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .callout {
+        border-left: 3px solid var(--accent);
+        background: var(--accent-soft);
+        border-radius: 0 12px 12px 0;
+        padding: 14px 16px;
+        margin: 0 0 16px;
+      }
+      .callout p:last-child {
+        margin-bottom: 0;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 11px 20px;
+        border-radius: 12px;
+        margin: 4px 8px 12px 0;
+      }
+      pre.tpl {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+        overflow-x: auto;
+        font-size: 13.5px;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 24px 0 60px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#top">Balam</a>
+        <nav class="links">
+          <a href="#privacy"><span class="l-ru">Конфиденциальность</span><span class="l-en">Privacy</span></a>
+          <a href="#terms"><span class="l-ru">Условия</span><span class="l-en">Terms</span></a>
+          <a href="#support"><span class="l-ru">Поддержка</span><span class="l-en">Support</span></a>
+          <a href="#delete"><span class="l-ru">Удаление аккаунта</span><span class="l-en">Delete account</span></a>
+        </nav>
+        <div class="langs" role="group" aria-label="Language">
+          <button type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap" id="top">
+      <!-- ================= INTRO ================= -->
+      <div class="l-ru">
+        <h1>Balam — правовая информация</h1>
+        <p class="lede">
+          Balam — мобильное приложение для детских садов и школ: расписание, посещаемость, оценки,
+          домашние задания, новости, документы и оплата. Аккаунты выдаёт учебное заведение.
+        </p>
+        <p class="meta">Редакция от 2 августа 2026 г.</p>
+      </div>
+      <div class="l-en">
+        <h1>Balam — legal information</h1>
+        <p class="lede">
+          Balam is a mobile app for preschools and schools: schedules, attendance, grades, homework,
+          news, documents and payments. Accounts are issued by the educational institution.
+        </p>
+        <p class="meta">Version of August 2, 2026.</p>
+      </div>
+
+      <!-- ================= PRIVACY ================= -->
+      <section class="doc" id="privacy">
+        <div class="l-ru">
+          <span class="tag">Документ 1 из 4</span>
+          <h2>Политика конфиденциальности</h2>
+          <p class="meta">Действует с 2 августа 2026 г.</p>
+
+          <h3>1. Кто обрабатывает ваши данные</h3>
+          <p>
+            Приложение Balam разрабатывает и поддерживает
+            ИП «PRESCHOOL EDUCATION», адрес: Республика Казахстан, г. Семей,
+            ул. Торайгырова, 17 (далее — «мы», «Разработчик»).
+          </p>
+          <p>
+            Важно: <strong>владельцем данных об учениках является учебное заведение</strong> (детский
+            сад или школа), которое использует Balam. Оно определяет, какие сведения вносить в систему,
+            кому давать доступ и как долго их хранить. Разработчик выступает обработчиком данных и
+            действует по поручению учебного заведения. Если вы хотите изменить или удалить сведения о
+            ребёнке, обращайтесь в первую очередь к администрации вашего учреждения — мы поможем
+            технически.
+          </p>
+
+          <h3>2. Какие данные мы обрабатываем</h3>
+          <div class="tablewrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Категория</th>
+                  <th>Что именно</th>
+                  <th>Зачем</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Учётная запись</td>
+                  <td>ФИО, номер телефона, пароль (в виде необратимого хеша), роль (родитель,
+                    преподаватель, администратор, директор, финансист), привязка к учебному заведению</td>
+                  <td>Вход в приложение и разграничение доступа</td>
+                </tr>
+                <tr>
+                  <td>Данные ребёнка</td>
+                  <td>ФИО, дата рождения, группа/класс, посещаемость, оценки, домашние задания,
+                    комментарии преподавателя, фотография профиля (если её загрузило учреждение)</td>
+                  <td>Ведение учебного процесса и информирование родителей</td>
+                </tr>
+                <tr>
+                  <td>Контент</td>
+                  <td>Новости и объявления, фотографии и файлы, которые загружают сотрудники
+                    учреждения, документы (справки, договоры), сообщения преподавателю</td>
+                  <td>Коммуникация между учреждением и родителями</td>
+                </tr>
+                <tr>
+                  <td>Геолокация</td>
+                  <td>Координаты устройства в момент отметки прихода/ухода — <strong>только для
+                    сотрудников</strong> учреждения и только в момент нажатия кнопки</td>
+                  <td>Проверка, что отметка сделана на территории учреждения (геозона)</td>
+                </tr>
+                <tr>
+                  <td>Оплата</td>
+                  <td>Счета, суммы, тарифы, статус и дата оплаты, подтверждающий файл</td>
+                  <td>Учёт оплаты услуг учреждения</td>
+                </tr>
+                <tr>
+                  <td>Технические данные</td>
+                  <td>Модель и ОС устройства, версия приложения, язык, сведения об ошибках и сбоях</td>
+                  <td>Работоспособность, диагностика, безопасность</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <p>
+              <strong>Мы не собираем:</strong> данные банковских карт (приложение их не запрашивает и
+              не хранит), контакты и список установленных приложений, историю браузера, фоновую
+              геолокацию, рекламные идентификаторы. Мы <strong>не продаём</strong> персональные данные
+              и не передаём их рекламным сетям и брокерам данных.
+            </p>
+          </div>
+
+          <h3>3. Основания обработки</h3>
+          <ul>
+            <li>исполнение договора между вами (или вашим учреждением) и нами — предоставление сервиса;</li>
+            <li>согласие субъекта данных (или законного представителя ребёнка), данное учебному
+              заведению при зачислении;</li>
+            <li>законный интерес — обеспечение безопасности сервиса и предотвращение злоупотреблений;</li>
+            <li>требования законодательства — в частности, хранение финансовых и бухгалтерских записей.</li>
+          </ul>
+
+          <h3>4. Данные детей</h3>
+          <p>
+            Balam не предназначен для самостоятельного использования детьми: аккаунты создаются только
+            для взрослых — родителей/законных представителей и сотрудников учреждения. Сведения о
+            ребёнке вносит учебное заведение на основании согласия законного представителя. Родитель
+            видит данные только своего ребёнка; преподаватель — только своей группы; администратор —
+            только своего учреждения.
+          </p>
+
+          <h3>5. Кому мы передаём данные</h3>
+          <ul>
+            <li><strong>Вашему учебному заведению</strong> — оно является владельцем данных.</li>
+            <li><strong>Хостинг-провайдеру</strong>, на серверах которого размещена система
+              (<code>api.moyrebenok.com.kz</code>).</li>
+            <li><strong>Платёжным сервисам</strong>, если оплата производится онлайн: обработка
+              платежа происходит на стороне провайдера, реквизиты карты нам не передаются.</li>
+            <li><strong>Государственным органам</strong> — только по законному письменному запросу.</li>
+          </ul>
+
+          <h3>6. Хранение и защита</h3>
+          <ul>
+            <li>Весь обмен данными идёт по защищённому каналу HTTPS/TLS.</li>
+            <li>Токены доступа хранятся в защищённом хранилище устройства (Keychain на iOS, Keystore на
+              Android), пароли на сервере — только в виде необратимого хеша.</li>
+            <li>Доступ разграничен по ролям; действия администраторов фиксируются в журнале аудита.</li>
+            <li>Данные хранятся, пока действует договор учреждения с нами, и удаляются в течение 90 дней
+              после его прекращения, кроме сведений, которые мы обязаны хранить по закону (финансовая
+              отчётность — установленный законодательством срок).</li>
+          </ul>
+
+          <h3>7. Ваши права</h3>
+          <p>Вы вправе запросить: доступ к своим данным, их исправление, блокирование или удаление,
+            отзыв согласия, а также информацию о том, кому они передавались. Обращайтесь на
+            <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a> — ответим в течение 30 календарных
+            дней. Порядок удаления аккаунта описан в разделе
+            <a href="#delete">«Удаление аккаунта и данных»</a>.</p>
+
+          <h3>8. Разрешения приложения</h3>
+          <ul>
+            <li><strong>Фото / галерея</strong> — чтобы прикрепить изображение к новости, документу или
+              подтверждению оплаты. Доступ запрашивается в момент выбора файла.</li>
+            <li><strong>Геолокация</strong> — только для сотрудников при отметке прихода/ухода и при
+              настройке геозоны учреждения. Фоновое отслеживание не ведётся.</li>
+            <li><strong>Микрофон</strong> — запрашивается только если вы записываете голосовое
+              вложение; без вашего явного действия запись не ведётся.</li>
+          </ul>
+          <p>Любое разрешение можно отозвать в настройках операционной системы; связанная с ним функция
+            перестанет работать, остальное приложение продолжит работать.</p>
+
+          <h3>9. Применимое право</h3>
+          <p>
+            Обработка данных осуществляется в соответствии с Законом Республики Казахстан «О
+            персональных данных и их защите». Для пользователей из ЕЭЗ дополнительно применяются
+            положения GDPR: правовые основания указаны в п. 3, права субъекта — в п. 7, включая право
+            подать жалобу в надзорный орган.
+          </p>
+
+          <h3>10. Изменения политики</h3>
+          <p>
+            При существенных изменениях мы обновим дату редакции на этой странице и уведомим
+            пользователей в приложении не позднее чем за 14 дней до вступления изменений в силу.
+          </p>
+
+          <h3>11. Контакты</h3>
+          <p>
+            ИП «PRESCHOOL EDUCATION», Республика Казахстан, г. Семей, ул. Торайгырова, 17<br />
+            По вопросам данных: <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a><br />
+            Поддержка: <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a>, <a href="tel:+77028525425">+7 702 852 5425</a>
+          </p>
+        </div>
+
+        <div class="l-en">
+          <span class="tag">Document 1 of 4</span>
+          <h2>Privacy Policy</h2>
+          <p class="meta">Effective August 2, 2026.</p>
+
+          <h3>1. Who processes your data</h3>
+          <p>
+            The Balam app is developed and operated by Individual Entrepreneur “PRESCHOOL EDUCATION”,
+            17 Toraigyrov St., Semey, Republic of Kazakhstan (“we”, “the Developer”).
+          </p>
+          <p>
+            Important: <strong>the educational institution owns the pupil data</strong>. The preschool
+            or school decides what is entered into the system, who gets access and how long it is kept.
+            The Developer acts as a processor on the institution’s instructions. To change or erase
+            information about a child, contact your institution first — we will assist technically.
+          </p>
+
+          <h3>2. What data we process</h3>
+          <div class="tablewrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Details</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Account</td>
+                  <td>Full name, phone number, password (stored as an irreversible hash), role (parent,
+                    teacher, administrator, director, finance officer), institution</td>
+                  <td>Sign-in and access control</td>
+                </tr>
+                <tr>
+                  <td>Child data</td>
+                  <td>Full name, date of birth, group/class, attendance, grades, homework, teacher
+                    comments, profile photo (if uploaded by the institution)</td>
+                  <td>Running the educational process and informing parents</td>
+                </tr>
+                <tr>
+                  <td>Content</td>
+                  <td>News and announcements, photos and files uploaded by staff, documents
+                    (certificates, contracts), messages to teachers</td>
+                  <td>Communication between the institution and parents</td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Device coordinates at the moment of a check-in/check-out — <strong>staff
+                    only</strong>, captured only when the button is pressed</td>
+                  <td>Verifying the check-in was made on the institution’s premises (geofence)</td>
+                </tr>
+                <tr>
+                  <td>Payments</td>
+                  <td>Invoices, amounts, tariffs, payment status and date, proof-of-payment file</td>
+                  <td>Tracking payments for the institution’s services</td>
+                </tr>
+                <tr>
+                  <td>Technical data</td>
+                  <td>Device model and OS, app version, language, crash and error reports</td>
+                  <td>Reliability, diagnostics, security</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <p>
+              <strong>We do not collect:</strong> payment card details (the app never asks for or
+              stores them), contacts or installed-app lists, browsing history, background location, or
+              advertising identifiers. We <strong>do not sell</strong> personal data and do not share it
+              with ad networks or data brokers.
+            </p>
+          </div>
+
+          <h3>3. Legal bases</h3>
+          <ul>
+            <li>performance of the contract between you (or your institution) and us — providing the service;</li>
+            <li>consent of the data subject (or a child’s legal guardian), given to the institution at enrolment;</li>
+            <li>legitimate interest — keeping the service secure and preventing abuse;</li>
+            <li>legal obligation — in particular retention of financial and accounting records.</li>
+          </ul>
+
+          <h3>4. Children’s data</h3>
+          <p>
+            Balam is not intended to be used by children directly: accounts are created only for adults
+            — parents/legal guardians and institution staff. Information about a child is entered by the
+            institution on the basis of the guardian’s consent. A parent sees only their own child, a
+            teacher only their group, an administrator only their institution.
+          </p>
+
+          <h3>5. Who we share data with</h3>
+          <ul>
+            <li><strong>Your educational institution</strong> — the data owner.</li>
+            <li><strong>Our hosting provider</strong>, where the system runs
+              (<code>api.moyrebenok.com.kz</code>).</li>
+            <li><strong>Payment providers</strong>, where online payment is used: the payment is handled
+              on their side and card details are never passed to us.</li>
+            <li><strong>Public authorities</strong> — only upon a lawful written request.</li>
+          </ul>
+
+          <h3>6. Storage and security</h3>
+          <ul>
+            <li>All traffic is encrypted with HTTPS/TLS.</li>
+            <li>Access tokens are kept in the device’s secure storage (iOS Keychain, Android Keystore);
+              passwords are stored server-side only as irreversible hashes.</li>
+            <li>Access is role-based; administrator actions are written to an audit log.</li>
+            <li>Data is retained while the institution’s contract with us is in force and erased within
+              90 days after it ends, except records we are legally required to keep (financial
+              reporting, for the statutory period).</li>
+          </ul>
+
+          <h3>7. Your rights</h3>
+          <p>You may request access to your data, its correction, restriction or erasure, withdraw your
+            consent, and ask who it has been shared with. Write to
+            <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a> — we reply within 30 calendar days.
+            Account deletion is described in <a href="#delete">“Account and data deletion”</a>.</p>
+
+          <h3>8. App permissions</h3>
+          <ul>
+            <li><strong>Photos / gallery</strong> — to attach an image to a news post, a document or a
+              payment confirmation. Requested at the moment you pick a file.</li>
+            <li><strong>Location</strong> — staff only, for check-in/check-out and for configuring the
+              institution’s geofence. No background tracking.</li>
+            <li><strong>Microphone</strong> — requested only if you record a voice attachment; nothing
+              is recorded without an explicit action by you.</li>
+          </ul>
+          <p>Any permission can be revoked in your OS settings; the related feature stops working while
+            the rest of the app continues to function.</p>
+
+          <h3>9. Governing law</h3>
+          <p>
+            Processing is carried out under the Law of the Republic of Kazakhstan “On Personal Data and
+            its Protection”. For users in the EEA, the GDPR additionally applies: legal bases are listed
+            in clause 3 and data-subject rights in clause 7, including the right to lodge a complaint
+            with a supervisory authority.
+          </p>
+
+          <h3>10. Changes to this policy</h3>
+          <p>
+            For material changes we update the revision date on this page and notify users in the app at
+            least 14 days before the changes take effect.
+          </p>
+
+          <h3>11. Contact</h3>
+          <p>
+            Individual Entrepreneur “PRESCHOOL EDUCATION”, 17 Toraigyrov St., Semey, Republic of Kazakhstan<br />
+            Data protection: <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a><br />
+            Support: <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a>, <a href="tel:+77028525425">+7 702 852 5425</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= TERMS ================= -->
+      <section class="doc" id="terms">
+        <div class="l-ru">
+          <span class="tag">Документ 2 из 4</span>
+          <h2>Условия использования (лицензионное соглашение)</h2>
+          <p class="meta">Действуют с 2 августа 2026 г.</p>
+
+          <h3>1. Соглашение</h3>
+          <p>
+            Настоящие Условия — договор между вами и ИП «PRESCHOOL EDUCATION».
+            Устанавливая или используя приложение Balam, вы соглашаетесь с ними. Если вы не согласны —
+            не используйте приложение.
+          </p>
+
+          <h3>2. Лицензия</h3>
+          <p>
+            Мы предоставляем вам неисключительную, непередаваемую, отзывную лицензию на использование
+            приложения на устройствах, которыми вы владеете или которые контролируете, исключительно в
+            личных или служебных целях, связанных с деятельностью вашего учебного заведения. Запрещено
+            копировать, декомпилировать, модифицировать приложение, обходить механизмы защиты и
+            авторизации, а также перепродавать доступ.
+          </p>
+
+          <h3>3. Аккаунты</h3>
+          <ul>
+            <li>Аккаунт создаёт администрация вашего учебного заведения; самостоятельная регистрация не
+              предусмотрена.</li>
+            <li>Вы отвечаете за сохранность пароля и за все действия, совершённые под вашей учётной
+              записью. О компрометации немедленно сообщите в учреждение и нам.</li>
+            <li>Передача доступа третьим лицам запрещена.</li>
+          </ul>
+
+          <h3>4. Допустимое использование</h3>
+          <p>Запрещается: загружать незаконный, оскорбительный контент или материалы, нарушающие права
+            третьих лиц; публиковать фотографии и персональные данные детей без согласия их законных
+            представителей; пытаться получить доступ к данным других учреждений или пользователей;
+            создавать чрезмерную нагрузку на сервис, использовать автоматизированный сбор данных.</p>
+
+          <h3>5. Пользовательский контент</h3>
+          <p>
+            Права на загружаемый вами контент остаются за вами (или за вашим учреждением). Загружая
+            контент, вы подтверждаете, что имеете на это право и что получены все необходимые согласия,
+            и предоставляете нам ограниченное право хранить и отображать его в приложении для оказания
+            услуги. Мы вправе удалить контент, нарушающий эти Условия.
+          </p>
+
+          <h3>6. Платежи</h3>
+          <p>
+            Приложение отображает счета, выставленные учебным заведением, и позволяет подтвердить их
+            оплату. Стоимость услуг, порядок оплаты и возвратов определяет учебное заведение; все
+            претензии по суммам и возвратам направляйте ему. Разработчик не является стороной расчётов
+            между родителем и учреждением.
+          </p>
+
+          <h3>7. Доступность сервиса</h3>
+          <p>
+            Приложение предоставляется «как есть». Мы стремимся к бесперебойной работе, но не гарантируем
+            отсутствие ошибок и перерывов, в том числе на время планового обслуживания. Данные в
+            приложении вносят сотрудники учреждения — за их точность отвечает учреждение.
+          </p>
+
+          <h3>8. Ограничение ответственности</h3>
+          <p>
+            В максимально допустимой законом степени Разработчик не несёт ответственности за косвенные
+            убытки, упущенную выгоду, утрату данных, а также за решения, принятые на основании сведений,
+            внесённых учебным заведением. Это не ограничивает ответственность, которую нельзя исключить
+            по закону.
+          </p>
+
+          <h3>9. Прекращение</h3>
+          <p>
+            Мы или ваше учебное заведение можем приостановить либо прекратить доступ при нарушении
+            настоящих Условий. Вы можете прекратить использование в любой момент, удалив приложение и
+            запросив удаление аккаунта (см. <a href="#delete">раздел об удалении</a>).
+          </p>
+
+          <h3>10. Приложения из App Store</h3>
+          <p>
+            Если вы установили Balam из Apple App Store: настоящие Условия заключены между вами и
+            Разработчиком, а не с Apple. Apple не несёт ответственности за приложение и его содержимое,
+            не оказывает по нему поддержку и не рассматривает претензии; при обоснованной претензии о
+            несоответствии приложения Apple вправе вернуть вам его стоимость (приложение
+            распространяется бесплатно). Apple и её дочерние компании являются третьими
+            лицами-выгодоприобретателями по настоящим Условиям.
+          </p>
+
+          <h3>11. Право и споры</h3>
+          <p>
+            К настоящим Условиям применяется право Республики Казахстан. Споры разрешаются путём
+            переговоров, а при недостижении согласия — в судах по месту нахождения Разработчика, если
+            иное не установлено императивными нормами о защите прав потребителей.
+          </p>
+
+          <h3>12. Изменения</h3>
+          <p>
+            Мы можем обновлять эти Условия; актуальная редакция всегда доступна на этой странице.
+            Продолжение использования приложения после вступления изменений в силу означает согласие с
+            ними.
+          </p>
+        </div>
+
+        <div class="l-en">
+          <span class="tag">Document 2 of 4</span>
+          <h2>Terms of Use (End-User Licence Agreement)</h2>
+          <p class="meta">Effective August 2, 2026.</p>
+
+          <h3>1. Agreement</h3>
+          <p>
+            These Terms form an agreement between you and Individual Entrepreneur “PRESCHOOL EDUCATION”. By
+            installing or using the Balam app you accept them. If you do not agree, do not use the app.
+          </p>
+
+          <h3>2. Licence</h3>
+          <p>
+            We grant you a non-exclusive, non-transferable, revocable licence to use the app on devices
+            you own or control, solely for personal or work purposes related to your educational
+            institution. You may not copy, decompile or modify the app, circumvent its security or
+            authorisation mechanisms, or resell access to it.
+          </p>
+
+          <h3>3. Accounts</h3>
+          <ul>
+            <li>Accounts are created by your institution’s administration; self-registration is not available.</li>
+            <li>You are responsible for keeping your password safe and for everything done under your
+              account. Report any compromise to your institution and to us immediately.</li>
+            <li>Sharing access with third parties is prohibited.</li>
+          </ul>
+
+          <h3>4. Acceptable use</h3>
+          <p>You must not: upload unlawful or abusive content or material infringing third-party rights;
+            publish photos or personal data of children without their guardians’ consent; attempt to
+            access data of other institutions or users; place excessive load on the service or scrape it
+            automatically.</p>
+
+          <h3>5. User content</h3>
+          <p>
+            You (or your institution) retain the rights to the content you upload. By uploading it you
+            confirm you are entitled to do so and that all required consents have been obtained, and you
+            grant us a limited right to store and display it in the app in order to provide the service.
+            We may remove content that breaches these Terms.
+          </p>
+
+          <h3>6. Payments</h3>
+          <p>
+            The app displays invoices issued by the educational institution and lets you confirm payment.
+            Pricing, payment and refund rules are set by the institution; direct all payment and refund
+            claims to it. The Developer is not a party to settlements between a parent and an institution.
+          </p>
+
+          <h3>7. Availability</h3>
+          <p>
+            The app is provided “as is”. We aim for uninterrupted operation but do not guarantee that it
+            will be error-free or always available, including during scheduled maintenance. Data is
+            entered by institution staff, and the institution is responsible for its accuracy.
+          </p>
+
+          <h3>8. Limitation of liability</h3>
+          <p>
+            To the fullest extent permitted by law, the Developer is not liable for indirect losses, lost
+            profit, loss of data, or for decisions made on the basis of information entered by an
+            educational institution. Nothing here limits liability that cannot be excluded by law.
+          </p>
+
+          <h3>9. Termination</h3>
+          <p>
+            We or your institution may suspend or terminate access if these Terms are breached. You may
+            stop using the app at any time by deleting it and requesting account deletion (see the
+            <a href="#delete">deletion section</a>).
+          </p>
+
+          <h3>10. App Store apps</h3>
+          <p>
+            If you obtained Balam from the Apple App Store: these Terms are between you and the
+            Developer, not Apple. Apple is not responsible for the app or its content, provides no
+            support for it and handles no claims; in the event of a valid claim that the app fails to
+            conform, Apple may refund the purchase price (the app is distributed free of charge). Apple
+            and its subsidiaries are third-party beneficiaries of these Terms.
+          </p>
+
+          <h3>11. Governing law and disputes</h3>
+          <p>
+            These Terms are governed by the law of the Republic of Kazakhstan. Disputes are settled
+            through negotiation and, failing that, by the courts at the Developer’s location, unless
+            mandatory consumer-protection rules provide otherwise.
+          </p>
+
+          <h3>12. Changes</h3>
+          <p>
+            We may update these Terms; the current version is always available on this page. Continued
+            use after the changes take effect means you accept them.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= SUPPORT ================= -->
+      <section class="doc" id="support">
+        <div class="l-ru">
+          <span class="tag">Документ 3 из 4</span>
+          <h2>Поддержка</h2>
+          <p>Мы отвечаем на обращения в рабочие дни, обычно в течение одного рабочего дня.</p>
+          <p>
+            <a class="btn" href="mailto:makpal200390@mail.ru?subject=Balam%20%E2%80%94%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0">Написать в поддержку</a>
+          </p>
+          <ul>
+            <li>E-mail: <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a></li>
+            <li>Телефон: <a href="tel:+77028525425">+7 702 852 5425</a></li>
+            <li>Часы работы: пн–пт, 09:00–18:00 (UTC+5)</li>
+          </ul>
+
+          <h3>Что указать в обращении</h3>
+          <ul>
+            <li>номер телефона, на который зарегистрирован аккаунт;</li>
+            <li>название учебного заведения;</li>
+            <li>модель устройства и версию ОС, версию приложения;</li>
+            <li>описание проблемы и, по возможности, скриншот.</li>
+          </ul>
+
+          <h3>Частые вопросы</h3>
+          <p><strong>Не могу войти / забыл пароль.</strong> Пароли выдаёт учебное заведение — обратитесь
+            к администратору вашего сада или школы, он сбросит пароль. Проверьте, что номер телефона
+            введён полностью, с кодом страны.</p>
+          <p><strong>Не вижу данные ребёнка.</strong> Значит, учреждение ещё не привязало ребёнка к
+            вашему номеру. Обратитесь к администрации.</p>
+          <p><strong>Неверная оценка, посещаемость или сумма в счёте.</strong> Эти сведения вносит
+            учреждение. Мы не можем изменить их по просьбе родителя — обратитесь к преподавателю или
+            администратору.</p>
+          <p><strong>Приложение работает с ошибками.</strong> Обновите его до последней версии в App
+            Store или Google Play, перезапустите. Если не помогло — напишите нам, приложив скриншот.</p>
+        </div>
+
+        <div class="l-en">
+          <span class="tag">Document 3 of 4</span>
+          <h2>Support</h2>
+          <p>We answer on business days, usually within one working day.</p>
+          <p>
+            <a class="btn" href="mailto:makpal200390@mail.ru?subject=Balam%20%E2%80%94%20support">Email support</a>
+          </p>
+          <ul>
+            <li>Email: <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a></li>
+            <li>Phone: <a href="tel:+77028525425">+7 702 852 5425</a></li>
+            <li>Hours: Mon–Fri, 09:00–18:00 (UTC+5)</li>
+          </ul>
+
+          <h3>What to include</h3>
+          <ul>
+            <li>the phone number your account is registered to;</li>
+            <li>the name of the educational institution;</li>
+            <li>device model, OS version and app version;</li>
+            <li>a description of the problem and, if possible, a screenshot.</li>
+          </ul>
+
+          <h3>FAQ</h3>
+          <p><strong>I can’t sign in / I forgot my password.</strong> Passwords are issued by the
+            institution — ask its administrator to reset yours. Make sure the phone number is entered in
+            full, including the country code.</p>
+          <p><strong>I don’t see my child’s data.</strong> The institution has not yet linked the child
+            to your number. Please contact its administration.</p>
+          <p><strong>A grade, attendance record or invoice amount is wrong.</strong> This data is entered
+            by the institution. We cannot change it at a parent’s request — contact the teacher or
+            administrator.</p>
+          <p><strong>The app misbehaves.</strong> Update it to the latest version in the App Store or
+            Google Play and restart it. If that doesn’t help, write to us with a screenshot.</p>
+        </div>
+      </section>
+
+      <!-- ================= DELETE ================= -->
+      <section class="doc" id="delete">
+        <div class="l-ru">
+          <span class="tag">Документ 4 из 4</span>
+          <h2>Удаление аккаунта и данных</h2>
+          <p>
+            Вы можете в любой момент попросить удалить свою учётную запись в приложении Balam и
+            связанные с ней персональные данные.
+          </p>
+
+          <h3>Как отправить запрос</h3>
+          <ol>
+            <li>Отправьте письмо на <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a> с темой
+              «Удаление аккаунта» с указанием номера телефона, на который зарегистрирован аккаунт, и
+              названия учебного заведения.</li>
+            <li>Мы подтвердим личность заявителя (звонком или сообщением на указанный номер).</li>
+            <li>Учётная запись удаляется в течение <strong>30 календарных дней</strong> после
+              подтверждения; вы получите письмо о выполнении.</li>
+          </ol>
+          <p>
+            <a class="btn" href="mailto:makpal200390@mail.ru?subject=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%B0%20Balam">Отправить запрос на удаление</a>
+          </p>
+          <p>Шаблон письма:</p>
+          <pre class="tpl">Тема: Удаление аккаунта Balam
+
+Прошу удалить мою учётную запись в приложении Balam и связанные с ней
+персональные данные.
+
+Номер телефона аккаунта: +7 ___ ___ __ __
+ФИО: ___
+Учебное заведение: ___
+Роль (родитель / сотрудник): ___</pre>
+
+          <h3>Что удаляется</h3>
+          <ul>
+            <li>учётная запись: ФИО, номер телефона, пароль, роль, привязка к учреждению;</li>
+            <li>ваши настройки в приложении и сохранённые на устройстве токены сессии;</li>
+            <li>загруженные вами файлы и сообщения, если они не относятся к учебной документации
+              учреждения.</li>
+          </ul>
+
+          <h3>Что сохраняется и почему</h3>
+          <ul>
+            <li><strong>Учебные записи ребёнка</strong> (посещаемость, оценки, документы) принадлежат
+              учебному заведению как владельцу данных и хранятся у него. Их удаление согласовывается с
+              администрацией учреждения — напишите нам, и мы передадим запрос.</li>
+            <li><strong>Финансовые и бухгалтерские записи</strong> (счета, платежи) хранятся в течение
+              срока, установленного законодательством Республики Казахстан, после чего удаляются.</li>
+            <li><strong>Обезличенные технические логи</strong> — до 12 месяцев; по ним вас нельзя
+              идентифицировать.</li>
+          </ul>
+
+          <h3>Удаление приложения</h3>
+          <p>
+            Удаление приложения с устройства стирает локальные данные и токены входа, но не удаляет
+            учётную запись на сервере — для этого отправьте запрос, как описано выше.
+          </p>
+        </div>
+
+        <div class="l-en">
+          <span class="tag">Document 4 of 4</span>
+          <h2>Account and data deletion</h2>
+          <p>
+            You can ask us at any time to delete your Balam account and the personal data associated
+            with it.
+          </p>
+
+          <h3>How to request deletion</h3>
+          <ol>
+            <li>Send an email to <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a> with the
+              subject “Account deletion”, stating the phone number the account is registered to and the
+              name of the educational institution.</li>
+            <li>We verify the requester’s identity (by a call or message to that number).</li>
+            <li>The account is deleted within <strong>30 calendar days</strong> of verification, and you
+              receive a confirmation email.</li>
+          </ol>
+          <p>
+            <a class="btn" href="mailto:makpal200390@mail.ru?subject=Balam%20account%20deletion">Send a deletion request</a>
+          </p>
+          <p>Email template:</p>
+          <pre class="tpl">Subject: Balam account deletion
+
+Please delete my Balam account and the personal data associated with it.
+
+Account phone number: +7 ___ ___ __ __
+Full name: ___
+Educational institution: ___
+Role (parent / staff): ___</pre>
+
+          <h3>What is deleted</h3>
+          <ul>
+            <li>the account: full name, phone number, password, role, institution link;</li>
+            <li>your in-app settings and the session tokens stored on your device;</li>
+            <li>files and messages you uploaded, unless they form part of the institution’s
+              educational records.</li>
+          </ul>
+
+          <h3>What is retained and why</h3>
+          <ul>
+            <li><strong>A child’s educational records</strong> (attendance, grades, documents) belong to
+              the educational institution as the data owner and remain with it. Their deletion is agreed
+              with the institution’s administration — write to us and we will pass the request on.</li>
+            <li><strong>Financial and accounting records</strong> (invoices, payments) are kept for the
+              period required by the law of the Republic of Kazakhstan and erased afterwards.</li>
+            <li><strong>Anonymised technical logs</strong> — up to 12 months; they cannot identify you.</li>
+          </ul>
+
+          <h3>Deleting the app</h3>
+          <p>
+            Removing the app from your device erases local data and sign-in tokens but does not delete
+            your server-side account — send a request as described above.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <p class="l-ru">
+        © 2026 ИП «PRESCHOOL EDUCATION». Balam — приложение для детских садов и
+        школ. Все товарные знаки принадлежат их правообладателям.
+      </p>
+      <p class="l-en">
+        © 2026 Individual Entrepreneur “PRESCHOOL EDUCATION”. Balam — an app for preschools and schools. All
+        trademarks are the property of their respective owners.
+      </p>
+    </footer>
+
+    <script>
+      (function () {
+        var KEY = 'balam-legal-lang';
+        var root = document.documentElement;
+        var buttons = document.querySelectorAll('[data-set-lang]');
+
+        function apply(lang) {
+          root.setAttribute('data-lang', lang);
+          root.setAttribute('lang', lang);
+          buttons.forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b.dataset.setLang === lang));
+          });
+          try {
+            localStorage.setItem(KEY, lang);
+          } catch (e) {}
+        }
+
+        var stored = null;
+        try {
+          stored = localStorage.getItem(KEY);
+        } catch (e) {}
+        var initial =
+          stored ||
+          (new URLSearchParams(location.search).get('lang') === 'en'
+            ? 'en'
+            : /^ru|^kk/i.test(navigator.language || '')
+              ? 'ru'
+              : 'en');
+        apply(initial === 'en' ? 'en' : 'ru');
+
+        buttons.forEach(function (b) {
+          b.addEventListener('click', function () {
+            apply(b.dataset.setLang);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

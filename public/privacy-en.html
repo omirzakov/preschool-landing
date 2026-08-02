@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--
+  English version of the Balam privacy policy. Served statically from public/
+  at https://moyrebenok.com.kz/privacy-en.html — this is the URL to give Apple
+  App Store Connect and Google Play Console reviewers.
+
+  Keep in sync with privacy.html (the Russian original) whenever data
+  collection changes.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Balam</title>
+    <meta
+      name="description"
+      content="Privacy Policy for the Balam mobile app: what personal data we collect, why, who we share it with, and how to have it deleted."
+    />
+    <meta name="theme-color" content="#FFFCF7" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Onest:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fffcf7;
+        --bg-warm: #fbf3e9;
+        --ink: #382818;
+        --ink-soft: #776153;
+        --ink-dark: #241910;
+        --line: #efe5d9;
+        --accent: #e15a0c;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: 'Onest', system-ui, -apple-system, sans-serif;
+        font-size: 16.5px;
+        line-height: 1.7;
+        color: var(--ink);
+        background: var(--bg);
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 22px;
+      }
+      header.top {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 252, 247, 0.92);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      header.top .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--ink-dark);
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 600;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+      }
+      .brand img {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+      }
+      .lang {
+        font-size: 14.5px;
+        color: var(--ink-soft);
+        text-decoration: none;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 14px;
+        white-space: nowrap;
+        transition: 0.18s;
+      }
+      .lang:hover {
+        color: var(--accent);
+        border-color: #ffd3ac;
+      }
+      main {
+        padding: 46px 0 80px;
+      }
+      h1 {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: clamp(30px, 5.4vw, 42px);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+        font-weight: 600;
+        color: var(--ink-dark);
+        margin: 0 0 12px;
+      }
+      h2 {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 23px;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        color: var(--ink-dark);
+        margin: 44px 0 12px;
+      }
+      h3 {
+        font-family: 'Onest', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--ink-dark);
+        margin: 26px 0 8px;
+      }
+      p,
+      li {
+        color: var(--ink);
+      }
+      p {
+        margin: 0 0 14px;
+      }
+      ul {
+        margin: 0 0 14px;
+        padding-left: 22px;
+      }
+      li {
+        margin-bottom: 7px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(225, 90, 12, 0.28);
+      }
+      a:hover {
+        border-bottom-color: var(--accent);
+      }
+      .meta {
+        font-size: 14.5px;
+        color: var(--ink-soft);
+        margin: 0 0 30px;
+      }
+      .lead {
+        font-size: 18px;
+        color: var(--ink-soft);
+        background: var(--bg-warm);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px 22px;
+        margin: 0 0 8px;
+      }
+      .lead p:last-child {
+        margin-bottom: 0;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 20px;
+        margin: 0 0 16px;
+        background: #fff;
+      }
+      .card h3 {
+        margin-top: 0;
+      }
+      .card p:last-child,
+      .card ul:last-child {
+        margin-bottom: 0;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: #fff6ed;
+        border-radius: 999px;
+        padding: 3px 11px;
+        margin-bottom: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15.5px;
+        margin: 0 0 18px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 11px 12px;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        font-weight: 700;
+        color: var(--ink-dark);
+        background: var(--bg-warm);
+      }
+      .scroll {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        margin-bottom: 18px;
+      }
+      .scroll table {
+        margin: 0;
+        min-width: 520px;
+      }
+      .scroll th:first-child,
+      .scroll td:first-child {
+        padding-left: 16px;
+      }
+      .scroll tr:last-child td {
+        border-bottom: none;
+      }
+      footer.bottom {
+        border-top: 1px solid var(--line);
+        padding: 26px 0 40px;
+        font-size: 14.5px;
+        color: var(--ink-soft);
+      }
+      footer.bottom a {
+        color: var(--ink-soft);
+        border-bottom-color: rgba(119, 97, 83, 0.3);
+      }
+      @media (max-width: 520px) {
+        body {
+          font-size: 16px;
+        }
+        main {
+          padding-top: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="/">
+          <img src="/logo.png" alt="" />
+          Balam
+        </a>
+        <a class="lang" href="/privacy.html">Русский</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <h1>Privacy Policy</h1>
+      <p class="meta">
+        <strong>Balam</strong> mobile app and the moyrebenok.com.kz web service ·
+        Last updated 30 July 2026
+      </p>
+
+      <div class="lead">
+        <p>
+          Balam is an app for preschools and schools: attendance, timetables,
+          grades, homework, news, invoice payments and communication with
+          teachers. Accounts are created by the educational institution — there
+          is no self sign-up in the app.
+        </p>
+        <p>
+          We show no advertising, never sell or share data for marketing
+          purposes, and use no third-party analytics or tracking SDKs.
+        </p>
+      </div>
+
+      <h2>1. Who processes your data</h2>
+      <p>
+        The data controller is the owner of the Balam service
+        (moyrebenok.com.kz).
+      </p>
+      <div class="card">
+        <ul>
+          <li>Address: 17 Toraigyrov St., Semey, Republic of Kazakhstan</li>
+          <li>
+            Privacy e-mail:
+            <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a>
+          </li>
+          <li>Phone: <a href="tel:+77028525425">+7 702 852 5425</a></li>
+        </ul>
+      </div>
+      <p>
+        Processing is carried out in accordance with the Law of the Republic of
+        Kazakhstan No. 94-V of 21 May 2013 "On Personal Data and Its Protection".
+      </p>
+
+      <h2>2. The role of the educational institution</h2>
+      <p>
+        Data about students, parents and staff is entered into the system by the
+        educational institution itself (the preschool or school). It decides
+        which records to keep, who gets access and for how long. We process that
+        data on the institution's behalf and only to the extent required to
+        operate the service.
+      </p>
+      <p>
+        Requests to correct or delete a student's records are therefore resolved
+        fastest directly with the institution's administration. If that is not
+        possible, contact us and we will help.
+      </p>
+
+      <h2>3. What data we process</h2>
+      <p>
+        The table below lists every category of data the app processes and the
+        purpose of processing. What applies to you depends on your role: parent,
+        teacher, administrator, director or finance officer.
+      </p>
+
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Details</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sign-in</td>
+              <td>Mobile phone number and password</td>
+              <td>Authentication, access recovery, security</td>
+            </tr>
+            <tr>
+              <td>User profile</td>
+              <td>
+                First and last name, phone number, e-mail address, date of
+                birth, profile photo, role, educational institution
+              </td>
+              <td>
+                Showing your profile, assigning access rights, linking the
+                school with the parent
+              </td>
+            </tr>
+            <tr>
+              <td>Student records</td>
+              <td>
+                First and last name, sex, date of birth, photo, group or class,
+                enrolment status, link to a parent
+              </td>
+              <td>Student record-keeping by the educational institution</td>
+            </tr>
+            <tr>
+              <td>Academic data</td>
+              <td>
+                Attendance, lesson grades and monthly grades, homework and
+                submissions, class timetable
+              </td>
+              <td>
+                Electronic gradebook, keeping parents informed about progress
+              </td>
+            </tr>
+            <tr>
+              <td>Finance</td>
+              <td>
+                Invoices and tariffs, payment amounts and dates, payment method
+                (cash, card, bank transfer), payment notes, a
+                <strong>photo of the payment receipt</strong>, institution
+                expenses and payroll sheets
+              </td>
+              <td>
+                Issuing invoices, letting the administration verify payments,
+                tracking outstanding balances
+              </td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>
+                Coordinates (latitude and longitude) captured when a staff
+                member checks in or out; the coordinates of the institution's
+                premises
+              </td>
+              <td>
+                Recording staff working time together with the place of
+                check-in. The fix is taken once, when the user taps the check-in
+                button — there is no background tracking
+              </td>
+            </tr>
+            <tr>
+              <td>Photos and files</td>
+              <td>
+                Images you choose yourself: profile photo, attachments to news
+                posts, institution documents, payment receipts
+              </td>
+              <td>Publishing news, document handling, payment confirmation</td>
+            </tr>
+            <tr>
+              <td>Messages and notifications</td>
+              <td>
+                Announcements, group messages, messages to a teacher, in-app
+                notification history
+              </td>
+              <td>Communication between the school and parents</td>
+            </tr>
+            <tr>
+              <td>Technical data</td>
+              <td>
+                Access tokens, the device interface language, internal audit
+                records (who changed a record and when)
+              </td>
+              <td>
+                Maintaining your session, localisation, security and dispute
+                resolution
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Device permissions</h2>
+      <p>
+        The app requests a permission only at the moment it is needed for a
+        specific action. Declining does not block sign-in — only the related
+        feature becomes unavailable.
+      </p>
+
+      <div class="card">
+        <span class="tag">Photos and media library</span>
+        <p>
+          Required so you can pick an image from your gallery: a profile photo,
+          a news attachment, a document or a payment receipt. The app receives
+          only the file you select and does not browse your library.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Location</span>
+        <p>
+          Used by staff when checking in and out, and by administrators when
+          marking the institution's premises on a map. Location is requested
+          only while the app is open and in use; background access and
+          continuous tracking are not used. Parents do not need this permission.
+        </p>
+      </div>
+
+      <h2>5. Who we share data with</h2>
+      <p>We do not sell data. Sharing happens only in these cases:</p>
+      <ul>
+        <li>
+          <strong>Within the educational institution</strong> — with staff,
+          limited to their role: a teacher sees their own students, the
+          administration sees attendance and invoices, the finance officer sees
+          payments. A parent sees only their own child's data.
+        </li>
+        <li>
+          <strong>Hosting provider</strong> — the servers that run the service
+          and its database (api.moyrebenok.com.kz). Data is transmitted
+          encrypted and used solely to operate the service.
+        </li>
+        <li>
+          <strong>Google (Maps)</strong> — Google Maps is used to display the
+          map when marking the institution's premises. Google receives the map
+          request; no student or payment data is sent to it.
+        </li>
+        <li>
+          <strong>External apps you launch yourself</strong> — tapping the
+          "contact teacher" button opens WhatsApp or a browser with the phone
+          number pre-filled. Any further processing is governed by those
+          services' own policies.
+        </li>
+        <li>
+          <strong>Apple App Store and Google Play</strong> — distribution of the
+          app and its updates. We do not send them user data.
+        </li>
+        <li>
+          <strong>Government authorities</strong> — only upon a lawful request,
+          in the manner prescribed by the legislation of the Republic of
+          Kazakhstan.
+        </li>
+      </ul>
+
+      <h2>6. What we never do</h2>
+      <ul>
+        <li>No advertising, and no data shared with ad networks.</li>
+        <li>No selling or renting of data.</li>
+        <li>
+          No third-party analytics, tracking SDKs or advertising identifiers.
+        </li>
+        <li>
+          No advertising profiles and no automated decisions with legal effect.
+        </li>
+        <li>
+          No audio or video recording, and no access to your contacts or
+          personal messages.
+        </li>
+      </ul>
+
+      <h2>7. Storage and security</h2>
+      <ul>
+        <li>
+          All traffic between the app and the server uses HTTPS (TLS) only.
+        </li>
+        <li>
+          Access tokens are kept in the operating system's secure storage (iOS
+          Keychain, Android Keystore), never in plain text.
+        </li>
+        <li>Passwords are stored on the server as irreversible hashes.</li>
+        <li>
+          Access is segregated by role: each user sees only what belongs to
+          their function and their institution.
+        </li>
+        <li>
+          Changes to significant records are written to an audit log, so it is
+          always possible to establish who made an edit and when.
+        </li>
+      </ul>
+
+      <h2>8. Retention periods</h2>
+      <p>
+        Data is retained while the educational institution uses the service and
+        for as long as it is needed for the purposes above. The institution can
+        change a student's or staff member's status, or delete a record, at any
+        time. Financial documents may be kept longer — for the period required
+        by the accounting legislation of the Republic of Kazakhstan.
+      </p>
+      <p>
+        Once an institution stops using the service, its data is deleted or
+        anonymised within no more than 90 days, unless the law requires
+        otherwise.
+      </p>
+
+      <h2>9. Your rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>learn what data about you we process;</li>
+        <li>have inaccurate or incomplete data corrected;</li>
+        <li>
+          have data blocked or deleted if it is processed in breach of the law;
+        </li>
+        <li>withdraw your consent to processing;</li>
+        <li>
+          lodge a complaint with the authorised personal data protection
+          authority of the Republic of Kazakhstan.
+        </li>
+      </ul>
+      <p>
+        Send your request to
+        <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a>. We reply
+        within 15 business days. So that we can verify the request comes from
+        you, please state the phone number the account is registered to and the
+        name of the educational institution.
+      </p>
+
+      <h2>10. Account and data deletion</h2>
+      <p>
+        Accounts are created and deleted by the educational institution. To have
+        your account and its associated data deleted, contact your preschool or
+        school administration, or e-mail us at
+        <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a> with the
+        subject "Account deletion", stating the account phone number and the
+        name of the institution.
+      </p>
+      <p>
+        We delete the profile, photo, notification history and messages within
+        30 days of confirming the request. Records the institution needs for
+        accounting and academic reporting (invoices, verified payments,
+        attendance registers) are kept for the period required by law and
+        deleted afterwards.
+      </p>
+
+      <h2>11. Children</h2>
+      <p>
+        The app is intended for adult users — parents and staff of educational
+        institutions. Children do not register in the app themselves.
+      </p>
+      <p>
+        Student records are entered by the educational institution as part of
+        the educational process; a child's legal guardian may obtain those
+        records and request their correction or deletion by contacting the
+        institution. Where an institution issues separate access to a student,
+        it does so with the consent of the student's legal guardian.
+      </p>
+
+      <h2>12. Transfers outside Kazakhstan</h2>
+      <p>
+        Data is stored on the servers that run the service. Where the hosting
+        provider's infrastructure is located outside the Republic of Kazakhstan,
+        transfers are made only to countries that ensure the protection of
+        personal data, and the safeguards described in section 7 are maintained.
+      </p>
+
+      <h2>13. Changes to this policy</h2>
+      <p>
+        We may update this policy — for example when new features are released.
+        The current version is always available at
+        <a href="https://moyrebenok.com.kz/privacy-en.html"
+          >moyrebenok.com.kz/privacy-en.html</a
+        >, and the revision date is shown at the top of the page. We announce
+        material changes through educational institutions or via an in-app
+        notice.
+      </p>
+
+      <h2>14. Contact us</h2>
+      <p>For any question about personal data or this policy:</p>
+      <div class="card">
+        <ul>
+          <li>
+            E-mail:
+            <a href="mailto:makpal200390@mail.ru">makpal200390@mail.ru</a>
+          </li>
+          <li>Phone: <a href="tel:+77028525425">+7 702 852 5425</a></li>
+          <li>Address: 17 Toraigyrov St., Semey, Republic of Kazakhstan</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="bottom">
+      <div class="wrap">
+        © 2026 Balam · <a href="/">Home</a> ·
+        <a href="/privacy.html">Политика конфиденциальности (RU)</a>
+      </div>
+    </footer>
+  </body>
+</html>
