@@ -23,9 +23,8 @@ const COLUMNS = [
   {
     title: 'Контакты',
     links: [
-      { href: 'tel:+77001234567', label: '+7 (700) 123-45-67' },
-      { href: 'mailto:hello@preschool.kz', label: 'hello@preschool.kz' },
-      { href: '#', label: 'Алматы, ул. Абая 150' },
+      { href: 'tel:+77028525425', label: '+7 702 852 54 25' },
+      { href: '#', label: 'г. Семей, Байжанбаева 79' },
     ],
   },
 ]

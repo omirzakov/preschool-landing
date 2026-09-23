@@ -1,6 +1,7 @@
 import { useReveal } from './lib/useReveal'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Demo from './components/Demo'
 import SocialProof from './components/SocialProof'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
@@ -21,6 +22,7 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Demo />
         <SocialProof />
         <Features />
         <HowItWorks />

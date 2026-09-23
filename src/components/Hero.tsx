@@ -1,6 +1,7 @@
 import {
   Sparkles,
   ArrowRight,
+  Apple,
   Play,
   ShieldCheck,
   Bell,
@@ -80,6 +81,29 @@ export default function Hero() {
             </a>
             <a href="#demo" className="btn btn-lg btn-ghost">
               <Play className="h-[17px] w-[17px] fill-current" /> Смотреть демо
+            </a>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2.5">
+            <a
+              href="https://play.google.com/store/apps/details?id=kz.balam.app"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-r-sm border border-line bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-700 no-underline shadow-sm transition-colors hover:border-orange-300 hover:text-orange-600"
+              aria-label="Скачать Balam в Google Play"
+            >
+              <Play className="h-[17px] w-[17px] fill-current" />
+              Google Play
+            </a>
+            <a
+              href="https://apps.apple.com/kz/app/balam-online/id6805102146?l=ru"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-r-sm border border-line bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-700 no-underline shadow-sm transition-colors hover:border-orange-300 hover:text-orange-600"
+              aria-label="Скачать Balam в App Store"
+            >
+              <Apple className="h-[18px] w-[18px] fill-current" />
+              App Store
             </a>
           </div>
 

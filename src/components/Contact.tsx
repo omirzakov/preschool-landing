@@ -95,19 +95,19 @@ export default function Contact() {
 
               <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-7 sm:flex-row sm:gap-8">
                 <a
-                  href="tel:+77001234567"
+                  href="tel:+77028525425"
                   className="inline-flex items-center gap-2.5 text-[15px] font-medium text-white no-underline"
                 >
                   <span className="grid h-10 w-10 place-items-center rounded-r-xs bg-white/10">
                     <Phone className="h-[18px] w-[18px]" />
                   </span>
-                  +7 (700) 123-45-67
+                  +7 702 852 54 25
                 </a>
                 <span className="inline-flex items-center gap-2.5 text-[15px] text-white/80">
                   <span className="grid h-10 w-10 place-items-center rounded-r-xs bg-white/10">
                     <MapPin className="h-[18px] w-[18px]" />
                   </span>
-                  Алматы, ул. Абая 150
+                  г. Семей, Байжанбаева 79
                 </span>
               </div>
             </div>
